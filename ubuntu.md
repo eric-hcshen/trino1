@@ -22,7 +22,7 @@
 
 ## split large file to small files
 
-> git remote add origin git@github.com:eric-hcshen/trino1.git
+> split -b 10M trino.tar "trino.tar.part"
 > cat trino.tar.part* > trino.tar.joined
 
 ## Github ssh
@@ -32,3 +32,4 @@
 > eval "$(ssh-agent -s)"
 > ssh-add ~/.ssh/id_ed25519
 > cat ~/.ssh/id_ed25519.pub
+> git remote add origin git@github.com:eric-hcshen/trino1.git
