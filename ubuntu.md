@@ -18,4 +18,17 @@
 
 ## list file/folder size in order
 
-> ls -lrha | more
+> du -sh *
+
+## split large file to small files
+
+> git remote add origin git@github.com:eric-hcshen/trino1.git
+> cat trino.tar.part* > trino.tar.joined
+
+## Github ssh
+[SSH to Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+> ssh-keygen -t ed25519 -C "eric.hcshen@gmail.com"
+> eval "$(ssh-agent -s)"
+> ssh-add ~/.ssh/id_ed25519
+> cat ~/.ssh/id_ed25519.pub
